@@ -60,9 +60,9 @@ namespace Book_Markov.Classes
         public string ToAuthors()
         {
             string toAuthors = "";
-            for (int iAuthors = 0; iAuthors < this.Authors.Count; iAuthors++)
+            for (int iAuthor = 0; iAuthor < this.Authors.Count; iAuthor++)
             {
-                toAuthors += this.Authors[iAuthors].FIO;
+                toAuthors += this.Authors[iAuthor].FIO;
                 if (iAuthor < this.Authors.Count - 1)
                     { toAuthors += ", "; }
             }
