@@ -13,7 +13,7 @@ namespace Book_Markov.Classes
         public List<Genre> Genres { get; set; }
         public List<Author> Authors { get; set; }
         public int Year { get; set; }   
-        public Book( int Id, string Name, List<Genre> genres, List<Author> Authors, int Year )
+        public Book( int Id, string Name, List<Genre> Genres, List<Author> Authors, int Year )
         {
             this.Id = Id;
             this.Name = Name;
@@ -49,10 +49,10 @@ namespace Book_Markov.Classes
         public string ToGenres()
         {
             string ToGenres = "";
-            for (int iGenre = 0; iGenre < Genres.Count; iGenre++)
+            for (int iGenre = 0; iGenre < this.Genres.Count; iGenre++)
             {
                 ToGenres += this.Genres[iGenre].Name;
-                if (iGenre < Genres.Count - 1)
+                if (iGenre < this.Genres.Count - 1)
                     ToGenres += ", ";
             }
             return ToGenres;
