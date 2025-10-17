@@ -35,6 +35,20 @@ namespace Book_Markov
             AddGenres();
             AddYears();
             CreateUI(AllBooks);
+
+            string authorsPath = "authors.txt";
+            string genresPath = "genres.txt";
+            string booksPath = "books.txt";
+
+            AllAuthors = Helpers.StorageHelper.LoadAuthorsFromFile(authorsPath);
+            AllGenres = Helpers.StorageHelper.LoadGenresFromFile(genresPath);
+            AllBooks = Helpers.StorageHelper.LoadBooksFromFile(booksPath);
+
+            // Продолжаем создание UI
+            AddAuthors();
+            AddGenres();
+            AddYears();
+            CreateUI(AllBooks);
         }
         void CreateUI(List<Classes.Book> AllBooks)
         {
@@ -49,6 +63,18 @@ namespace Book_Markov
             }
         }
 
+        private void OnSaveButtonClick(object sender, RoutedEventArgs e)
+        {
+            string authorsPath = "authors.txt";
+            string genresPath = "genres.txt";
+            string booksPath = "books.txt";
+
+            Classes.Storage.SaveAuthorsToFile(AllAuthors, authorsPath);
+            Classes.Storage.SaveGenresToFile(AllGenres, genresPath);
+            Classes.Storage.SaveBooksToFile(AllBooks, booksPath);
+
+            MessageBox.Show("Данные успешно сохранены!");
+        }
         private void Search_Book(object sender, KeyEventArgs e)
         {
             Search();

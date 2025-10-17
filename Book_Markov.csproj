@@ -70,6 +70,7 @@
     <Compile Include="Classes\Author.cs" />
     <Compile Include="Classes\Book.cs" />
     <Compile Include="Classes\Genre.cs" />
+    <Compile Include="Classes\Storage.cs" />
     <Compile Include="Elements\Element.xaml.cs">
       <DependentUpon>Element.xaml</DependentUpon>
     </Compile>

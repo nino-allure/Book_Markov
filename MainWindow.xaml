@@ -26,5 +26,6 @@
                 
             </StackPanel>
         </ScrollViewer>
+        <Button Click="OnSaveButtonClick" Margin="200,369,200,31">Сохранить данные</Button>
     </Grid>
 </Window>
